@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intellect Edu - Интеллектуалды оқу орталығы</title>
+    <link rel="stylesheet" href="ctyle.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Intellect Edu</div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Басты бет</a></li>
+                <li><a href="abont.html">Біз туралы</a></li>
+                <li><a href="courses.html">Курстар</a></li>
+                <li><a href="teachers.html">Оқытушылар</a></li>
+                <li><a href="news.html">Жаңалықтар</a></li>
+                <li><a href="contact.html">Байланыс</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Білім - болашаққа жол</h1>
+            <p>Intellect Edu орталығында сапалы білім алыңыз</p>
+            <a href="courses.html" class="btn">Курстарды қарау</a>
+        </section>
+
+        <section class="features">
+            <div class="feature">
+                <h3>Кәсіби оқытушылар</h3>
+                <p>Тәжірибелі мамандардан үйреніңіз</p>
+            </div>
+            <div class="feature">
+                <h3>Жекешелендірілген оқу</h3>
+                <p>Әр оқушыға жеке көңіл бөлу</p>
+            </div>
+            <div class="feature">
+                <h3>Заманауи әдістер</h3>
+                <p>Соңғы педагогикалық әдістерді қолданамыз</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Intellect Edu. Барлық құқықтар қорғалған.</p>
+    </footer>
+
+    <script>
+        // Басты бетке арналған JS коды
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Басты бет жүктелді');
+            
+            // Герой бөліміне анимация
+            const hero = document.querySelector('.hero');
+            hero.style.opacity = '0';
+            setTimeout(() => {
+                hero.style.transition = 'opacity 1s ease-in';
+                hero.style.opacity = '1';
+            }, 300);
+        });
+    </script>
+</body>
+</html>

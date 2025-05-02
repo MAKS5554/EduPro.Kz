@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Курстар - Intellect Edu</title>
+    <link rel="stylesheet" href="ctyle.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Intellect Edu</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Басты бет</a></li>
+                <li><a href="abont.html">Біз туралы</a></li>
+                <li><a href="courses.html" class="active">Курстар</a></li>
+                <li><a href="teachers.html">Оқытушылар</a></li>
+                <li><a href="news.html">Жаңалықтар</a></li>
+                <li><a href="contact.html">Байланыс</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="courses-section">
+            <h1>Біздің курстар</h1>
+            
+            <div class="course-categories">
+                
+                <button class="category-btn" data-category="math">Математика</button>
+                <button class="category-btn" data-category="science">Ғылым</button>
+                <button class="category-btn" data-category="language">Тілдер</button>
+                <button class="category-btn" data-category="programming">Программалау</button>
+            </div>
+            
+            <div class="news-item">
+                    <img src="https://i.pinimg.com/originals/8e/d7/c9/8ed7c9712f88886c257f67a37a5a3c97.jpg">
+                   <center><h1>Математика</h1></center>
+                    <p><center><h3><u>7-11 сынып оқушыларына арналған математика курсы</u></h3></center></p>
+                    <center><span class="price">25 000 ₸/ай</span></center>
+                </div>
+                
+                <div class="news-item">
+                    <img src="https://rkd.ie/wp-content/uploads/2018/11/jnj-cleanrooms-featured.jpg" alt="Оқытушы">
+                    <center><h1>Физика</h1></center>
+                   <p><center><h3><u>Физика пәнінен тереңдетілген оқу</u></h3></center></p>
+                    <center><span class="price">30 000 ₸/ай</span></center>
+                </div>
+                
+                <div class="news-item">
+                    <img src="https://i.pinimg.com/originals/f8/ea/47/f8ea47edc238ce7d1529d7d20859c192.jpg" alt="Оқытушы">
+                    <center><h1>Ағылшын тілі</h1></center>
+                    <p><center><h3><u>Барлық деңгейдегі ағылшын тілі курстары</u></h3></center></p>
+                    <center><span class="price">20 000 ₸/ай</span></center>
+                </div>
+                
+                <div class="news-item">
+                    <img src="https://avatars.mds.yandex.net/get-znatoki/1548967/2a0000017f7ee5517b4c1c58dd7e19f7c164/orig" alt="Оқытушы">
+                    <center><h1>Python бастауыштарға</h1></center>
+                    <p><center><h3><u>Программалауды нөлден үйрену</u></h3></center></p>
+                    <center><span class="price">35 000 ₸/ай</span></center>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Intellect Edu. Барлық құқықтар қорғалған.</p>
+    </footer>
+
+    <script>
+        // Курстар бетіне арналған JS коды
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Курстар беті жүктелді');
+            
+            // Курстарды сүзгілеу
+            const categoryBtns = document.querySelectorAll('.category-btn');
+            const courseCards = document.querySelectorAll('.course-card');
+            
+            categoryBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    // Белсенді түймені өзгерту
+                    categoryBtns.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Курстарды көрсету/жасыру
+                    const category = this.dataset.category;
+                    
+                    courseCards.forEach(card => {
+                        if (category === 'all' || card.dataset.category === category) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>

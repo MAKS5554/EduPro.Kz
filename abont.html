@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Біз туралы - Intellect Edu</title>
+    <link rel="stylesheet" href="ctyle.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Intellect Edu</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Басты бет</a></li>
+                <li><a href="abont.html" class="active">Біз туралы</a></li>
+                <li><a href="courses.html">Курстар</a></li>
+                <li><a href="teachers.html">Оқытушылар</a></li>
+                <li><a href="news.html">Жаңалықтар</a></li>
+                <li><a href="contact.html">Байланыс</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="about-section">
+            <h1>Біз туралы</h1>
+            <p>Intellect Edu - бұл 2010 жылдан бері жұмыс істеп келе жатқан интеллектуалды даму орталығы.</p>
+            
+            <div class="history">
+                <h2>Тарихымыз</h2>
+                <p>Біздің орталық 2010 жылы алғашқы оқушыларды қабылдаумен жұмысын бастады. Қазіргі уақытта бізде 1000-нан астам оқушы білім алуда.</p>
+            </div>
+            
+            <div class="mission">
+                <h2>Миссиямыз</h2>
+                <p>Әрбір оқушының потенциалын ашу және оларға болашақта сәттілікке жетуге көмектесу.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Intellect Edu. Барлық құқықтар қорғалған.</p>
+    </footer>
+
+    <script>
+        // Біз туралы бетке арналған JS коды
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Біз туралы бет жүктелді');
+            
+            // Тарих және миссия бөлімдеріне анимация
+            const sections = document.querySelectorAll('.history, .mission');
+            sections.forEach((section, index) => {
+                section.style.opacity = '0';
+                section.style.transform = 'translateY(20px)';
+                setTimeout(() => {
+                    section.style.transition = 'all 0.5s ease-out';
+                    section.style.opacity = '1';
+                    section.style.transform = 'translateY(0)';
+                }, 300 + (index * 200));
+            });
+        });
+    </script>
+</body>
+</html>

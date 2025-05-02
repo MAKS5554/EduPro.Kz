@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Жаңалықтар - Intellect Edu</title>
+    <link rel="stylesheet" href="ctyle.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Intellect Edu</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Басты бет</a></li>
+                <li><a href="about.html">Біз туралы</a></li>
+                <li><a href="courses.html">Курстар</a></li>
+                <li><a href="teachers.html">Оқытушылар</a></li>
+                <li><a href="news.html" class="active">Жаңалықтар</a></li>
+                <li><a href="contact.html">Байланыс</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="news-section">
+            <h1>Жаңалықтар</h1>
+            
+            <div class="news-grid">
+                <article class="news-item">
+                    <img src="https://avatars.mds.yandex.net/i?id=3e9991b4bcd3fa0d26470da3fe8877d8_l-4407838-images-thumbs&n=13" alt="Жаңалық суреті">
+                    <div class="news-content">
+                        <h3>Жазғы мектеп ашылды</h3>
+                        <time datetime="2023-05-15">15 Мамыр 2023</time>
+                        <p>Біздің орталықта жазғы мектеп басталды. 1 маусымнан бастап жаңа топтар қабылдауда.</p>
+                        <a href="#" class="read-more">Толығырақ</a>
+                    </div>
+                </article>
+                
+                <article class="news-item">
+                    <img src="https://sun9-4.userapi.com/impg/QVMz5tBKOBkIaxirmp7Na8LUw-zP9ElELJOyxA/ZYXu4MkqVGc.jpg?size=1024x461&quality=95&sign=067e879de00f25849ee6b0b69dcdad38&c_uniq_tag=akJUTf4qqJbm2OOme0FYoRQvE0Et6ygFcSEei5pcIik&type=album" alt="Жаңалық суреті">
+                    <div class="news-content">
+                        <h3>Халықаралық олимпиада жеңімпаздары</h3>
+                        <time datetime="2023-04-20">20 Сәуір 2023</time>
+                        <p>Біздің оқушылар халықаралық математика олимпиадасынан алтын медальмен оралды.</p>
+                        <a href="#" class="read-more">Толығырақ</a>
+                    </div>
+                </article>
+                
+                <article class="news-item">
+                    <img src="https://avatars.mds.yandex.net/i?id=bc77a72a19ae93d87447683422b7bac2_l-4079990-images-thumbs&n=13" alt="Жаңалық суреті">
+                    <div class="news-content">
+                        <h3>Жаңа курс: IT Startup</h3>
+                        <time datetime="2023-03-10">10 Наурыз 2023</time>
+                        <p>IT Startup курсында жас кәсіпкерлерді дайындаймыз. Тіркеулер басталды.</p>
+                        <a href="#" class="read-more">Толығырақ</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 202 Intellect Edu. Барлық құқықтар қорғалған.</p>
+    </footer>
+
+    <script>
+        // Жаңалықтар бетіне арналған JS коды
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Жаңалықтар беті жүктелді');
+            
+            // Жаңалықтарды көрсету
+            const newsItems = document.querySelectorAll('.news-item');
+            
+            newsItems.forEach((item, index) => {
+                item.style.opacity = '0';
+                item.style.transform = 'translateX(-20px)';
+                
+                setTimeout(() => {
+                    item.style.transition = 'all 0.4s ease-out';
+                    item.style.opacity = '1';
+                    item.style.transform = 'translateX(0)';
+                }, 200 * index);
+            });
+            
+            // "Толығырақ" батырмасына эффект
+            const readMoreLinks = document.querySelectorAll('.read-more');
+            
+            readMoreLinks.forEach(link => {
+                link.addEventListener('mouseenter', function() {
+                    this.style.paddingLeft = '10px';
+                });
+                
+                link.addEventListener('mouseleave', function() {
+                    this.style.paddingLeft = '0';
+                });
+            });
+        });
+    </script>
+</body>
+</html>

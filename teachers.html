@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оқытушылар - Intellect Edu</title>
+    <link rel="stylesheet" href="ctyle.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Intellect Edu</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Басты бет</a></li>
+                <li><a href="abont.html">Біз туралы</a></li>
+                <li><a href="courses.html">Курстар</a></li>
+                <li><a href="teachers.html" class="active">Оқытушылар</a></li>
+                <li><a href="news.html">Жаңалықтар</a></li>
+                <li><a href="contact.html">Байланыс</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="teachers-section">
+            <h1>Біздің оқытушылар</h1>
+            
+            <div class="teachers-grid">
+                <div class="teacher-card">
+                    <img src="https://avatars.mds.yandex.net/i?id=d4ee336761f56b5463ffff64a46d5621_l-3949238-images-thumbs&n=13" alt="Оқытушы">
+                    <h3>Асқар Жұмашев</h3>
+                    <p>Математика маманы</p>
+                    <p>10 жылдық тәжірибе</p>
+                </div>
+                
+                <div class="teacher-card">
+                    <img src="https://avatars.mds.yandex.net/i?id=126baa3eecadd98b2044b209b12694f6_l-5174967-images-thumbs&n=13" alt="Оқытушы">
+                    <h3>Айгүл Сапарбаева</h3>
+                    <p>Физика пәнінің оқытушысы</p>
+                    <p>PhD, 8 жылдық тәжірибе</p>
+                </div>
+                
+                <div class="teacher-card">
+                    <img src="https://sun9-10.userapi.com/impf/c837639/v837639900/60625/nqDwJZ2973w.jpg?size=900x590&quality=96&sign=2e579811367dac0c34e4f543fa09a34a&c_uniq_tag=Z3SAzmEf_hta4FUjGSGYj8ykH6x08MOWYRZ9hD3F1uQ&type=album" alt="Оқытушы">
+                    <h3>Дәулет Қараев</h3>
+                    <p>Ағылшын тілі</p>
+                    <p>Кембридж сертификаты, 12 жылдық тәжірибе</p>
+                </div>
+                
+                <div class="teacher-card">
+                    <img src="https://avatars.mds.yandex.net/i?id=aafc35d154a1f127663a89ef41acd18a_l-12523590-images-thumbs&n=13" alt="Оқытушы">
+                    <h3>Гүлназ Әбілдаева</h3>
+                    <p>Программалау</p>
+                    <p>Full-stack developer, 5 жылдық тәжірибе</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Intellect Edu. Барлық құқықтар қорғалған.</p>
+    </footer>
+
+    <script>
+        // Оқытушылар бетіне арналған JS коды
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Оқытушылар беті жүктелді');
+            
+            // Оқытушы карточкаларына эффект
+            const teacherCards = document.querySelectorAll('.teacher-card');
+            
+            teacherCards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'scale(0.9)';
+                
+                setTimeout(() => {
+                    card.style.transition = 'all 0.3s ease-out';
+                    card.style.opacity = '1';
+                    card.style.transform = 'scale(1)';
+                }, 200 * index);
+                
+                // Карточкаға тінту эффектісі
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'scale(1.05)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'scale(1)';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
